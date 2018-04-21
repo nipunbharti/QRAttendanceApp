@@ -16,7 +16,7 @@ export default Header;
 const styles = StyleSheet.create({
 	headerContainer:{
 		alignItems: 'center',
-		flex: 0.6,
+		flex: 0.8,
 		justifyContent: 'center',
 		backgroundColor: '#0353A4'
 	},

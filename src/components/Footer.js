@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Alert, TouchableHighlight } from 'react-native';
 
 class Footer extends Component{
+	onPressFooter(){
+		Alert.alert("Made by Akhil, Nipun and Yashovardhan.");
+	}
 	render(){
 		return(
-			<View style={styles.footerContainer}>
+			<TouchableHighlight style={styles.footerContainer} onPress={this.onPressFooter}>
 				<Text style={styles.footerTextContainer}>Made with 💝 for college</Text>
-			</View>
+			</TouchableHighlight>
 		);
 	}
 }
