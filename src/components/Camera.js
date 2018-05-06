@@ -8,6 +8,7 @@ import {
   Text,
   TouchableOpacity,
   Linking,
+  View
 } from 'react-native';
 
 import QRCodeScanner from 'react-native-qrcode-scanner';
@@ -22,7 +23,7 @@ class ScanScreen extends Component {
   render() {
     return (
       <QRCodeScanner
-        
+        onRead={this.onSuccess.bind(this)}
         bottomContent={
           <TouchableOpacity style={styles.buttonTouchable}>
             <Text style={styles.buttonText}>OK. Got it!</Text>

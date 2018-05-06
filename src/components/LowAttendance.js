@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ScrollView, View, Text, StyleSheet, Alert } from 'react-native';
 
-class Details1 extends Component{
+class LowAttendance extends Component{
 	constructor(){
 		super();
 		this.state = {
@@ -9,7 +9,7 @@ class Details1 extends Component{
 		}
 	}
 	componentWillMount(){
-		fetch('http://192.168.137.221:3000/n1/', {
+		fetch('http://192.168.137.221:3000/n2/', {
 		  method: 'POST',
 		  // body: JSON.stringify({
 		  //   "ced15i013":"kn"
@@ -37,22 +37,16 @@ class Details1 extends Component{
 						<View style={styles.rollNoHeader}>
 							<Text style={{fontSize: 20, fontWeight: '600', color: 'white'}}>Roll Number</Text>
 						</View>
-						<View style={styles.attendanceHeader}>
-							<Text style={{fontSize: 20, fontWeight: '600', color: 'white'}}>Attendance</Text>
-						</View>
 					</View>
 					{
 						x.map(function(index){
 							return(
 								<View style={styles.attendanceSheet}>
 									<View style={styles.name}>
-										<Text style={{fontSize: 16}}>{index.name}</Text>
+										<Text style={{fontSize: 18}}>{index.name}</Text>
 									</View>
 									<View style={styles.rollNo}>
-										<Text style={{fontSize: 16}}>{index.roll}</Text>
-									</View>
-									<View style={styles.attendance}>
-										<Text style={{fontSize: 16}}>{index.attendance}</Text>
+										<Text style={{fontSize: 18}}>{index.roll}</Text>
 									</View>
 								</View>
 							);
@@ -64,7 +58,7 @@ class Details1 extends Component{
 	}
 }
 
-export default Details1;
+export default LowAttendance;
 
 const styles = StyleSheet.create({
 	headerContainer:{
@@ -79,25 +73,12 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	rollNo: {
-		flex: 0.7,
-		alignItems: 'center',
-		justifyContent: 'center',
-		padding: 7
-	},
-	rollNoHeader: {
-		flex: 0.7,
-		alignItems: 'center',
-		justifyContent: 'center',
-		padding: 15,
-		backgroundColor: '#0353A4'
-	},
-	attendance: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 7
 	},
-	attendanceHeader: {
+	rollNoHeader: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -105,14 +86,14 @@ const styles = StyleSheet.create({
 		backgroundColor: '#0353A4'
 	},
 	nameHeader: {
-		flex: 0.8,
+		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 15,
 		backgroundColor: '#0353A4'
 	},
 	name: {
-		flex: 0.8,
+		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'center',
 		padding: 7

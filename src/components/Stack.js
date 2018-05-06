@@ -3,6 +3,7 @@ import { StackNavigator } from 'react-navigation';
 import Homescreen from './Homescreen';
 import ScanScreen from './Camera';
 import Details1 from './Display1';
+import LowAttendance from './LowAttendance';
 
 export const RootStack = StackNavigator({
   Home: {
@@ -17,7 +18,13 @@ export const RootStack = StackNavigator({
   Details1: {
     screen: Details1,
     navigationOptions: {
-      title: 'Details1'
+      title: 'Attendance sheet'
+    }
+  },
+  LowAttendance: {
+    screen: LowAttendance,
+    navigationOptions: {
+      title: 'Low Attendance'
     }
   },
   initialRouteName: 'Home',
