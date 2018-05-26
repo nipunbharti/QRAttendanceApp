@@ -4,6 +4,7 @@ import Homescreen from './Homescreen';
 import ScanScreen from './Camera';
 import Details1 from './Display1';
 import LowAttendance from './LowAttendance';
+import Details from './Details1';
 
 export const RootStack = StackNavigator({
   Home: {
@@ -25,6 +26,12 @@ export const RootStack = StackNavigator({
     screen: LowAttendance,
     navigationOptions: {
       title: 'Low Attendance'
+    }
+  },
+  MastHead: {
+    screen: Details,
+    navigationOptions: {
+      title: 'Mast Head'
     }
   },
   initialRouteName: 'Home',

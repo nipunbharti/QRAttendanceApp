@@ -8,16 +8,19 @@ import {
   Text,
   TouchableOpacity,
   Linking,
-  View
+  View,
+  Alert
 } from 'react-native';
 
 import QRCodeScanner from 'react-native-qrcode-scanner';
 
 class ScanScreen extends Component {
   onSuccess(e) {
-    Linking
-      .openURL(e.data)
-      .catch(err => console.error('An error occured', err));
+    fetch('http://172.16.89.233:3000/n3/', {
+      method: 'POST',
+      body:e.data
+    });
+    Alert.alert("Marked.")
   }
 
   render() {
@@ -26,10 +29,12 @@ class ScanScreen extends Component {
         onRead={this.onSuccess.bind(this)}
         bottomContent={
           <TouchableOpacity style={styles.buttonTouchable}>
-            <Text style={styles.buttonText}>OK. Got it!</Text>
+            <Text style={styles.buttonText}>Scan the QR Code</Text>
           </TouchableOpacity>
         }
+        fadeIn={false}
       />
+      
     );
   }
 }

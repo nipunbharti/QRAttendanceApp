@@ -15,7 +15,7 @@ export default class Homescreen extends React.Component {
       <View style={styles.container}>
         <Header />
         <Buttons navigationStuff = {this.props.navigation} />
-        <Footer />
+        <Footer navigationStuff = {this.props.navigation} />
       </View>
     );
   }

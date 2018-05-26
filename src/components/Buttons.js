@@ -9,10 +9,6 @@ class Buttons extends Component{
 		this.state = {
 			data: [],
 		}
-		this.onPressButton = this.onPressButton.bind(this);
-	}
-	onPressButton(){
-		
 	}
 	render(){
 		const { navigate } = this.props.navigationStuff;

@@ -6,9 +6,10 @@ class Footer extends Component{
 		Alert.alert("Made by Akhil, Nipun and Yashovardhan.");
 	}
 	render(){
+		const { navigate } = this.props.navigationStuff;
 		return(
-			<TouchableHighlight style={styles.footerContainer} onPress={this.onPressFooter}>
-				<Text style={styles.footerTextContainer}>Made with 💝 for college</Text>
+			<TouchableHighlight style={styles.footerContainer} onPress={() => navigate('MastHead')}>
+				<Text style={styles.footerTextContainer}>Made with 💝 for IIITDM</Text>
 			</TouchableHighlight>
 		);
 	}

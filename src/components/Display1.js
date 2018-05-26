@@ -9,7 +9,7 @@ class Details1 extends Component{
 		}
 	}
 	componentWillMount(){
-		fetch('http://192.168.137.221:3000/n1/', {
+		fetch('http://172.16.89.233:3000/n1/', {
 		  method: 'POST',
 		  // body: JSON.stringify({
 		  //   "ced15i013":"kn"
